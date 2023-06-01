@@ -32,6 +32,8 @@ export default defineConfig({
       yellow: '#f4c418',
       red: '#de2b27',
       blue: '#3489cc',
+      primary: '#202020',
+      secondary: '#6d6d6d',
     },
   },
 })

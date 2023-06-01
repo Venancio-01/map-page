@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-const data = reactive({
-  total: 0,
-  activated: 0,
-  collaborative: 0,
-  todayActive: 0,
-  monthActive: 0,
-})
+const data = reactive(window.statisticsData)
 
 const statistics = [{
   label: '总设备',
@@ -22,16 +16,16 @@ const statistics = [{
 }, {
   label: '本月激活',
   value: 'monthActive',
-}]
+}] as const
 </script>
 
 <template>
   <div flex="~">
-    <div v-for="(item, index) in statistics" :key="index" flex="1">
-      <div text="xl">
-        {{ data?.[item.value] }}
+    <div v-for="(item, index) in statistics" :key="index" flex="~ 1 col" justify="center" items="center">
+      <div text="36px" font="bold">
+        {{ data[item.value] }}
       </div>
-      <div text="gray-700">
+      <div text="secondary 16px">
         {{ item.label }}
       </div>
     </div>

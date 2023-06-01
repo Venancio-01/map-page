@@ -1,17 +1,24 @@
 <template>
-  <main h="full" p="x-30px y-40px" grid="~ rows-[120px_1fr_1fr] cols-2">
-    <div col-span="2" flex="~">
-      <div flex="1">
-        <MainStatistics />
-      </div>
-      <div flex="1" />
+  <main flex="~" gap="x-24px" h="full" p="x-14px y-20px">
+    <div class="card" flex="1">
+      <BaseStatistics />
+
+      <el-divider />
+
+      <BaseMap />
     </div>
 
-    <div row-span="2">
-      地图
+    <div class="card" flex="1">
+      <BaseFilter />
+      <BaseLine />
+      <BaseTable />
     </div>
-
-    <div>折线图</div>
-    <div>列表</div>
   </main>
 </template>
+
+<style scoped>
+.card {
+  padding: 16px;
+  box-shadow: 0px 0px 13px 0px rgba(0, 22, 45, 0.1);
+}
+</style>

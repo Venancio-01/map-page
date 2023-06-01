@@ -12,17 +12,17 @@ import VueMacros from 'unplugin-vue-macros/vite'
 export default defineConfig({
   base: './',
 
-  build: {
-    lib: {
-      entry: './index.html', // 入口文件
-      name: 'MapPage',
-      fileName: 'map-page', // 输出的文件名
-      formats: ['umd'], // 打包的格式
-    },
-  },
+  // build: {
+  //   lib: {
+  //     entry: './index.html', // 入口文件
+  //     name: 'MapPage',
+  //     fileName: 'map-page', // 输出的文件名
+  //     formats: ['umd'], // 打包的格式
+  //   },
+  // },
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
+      '@/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
 
